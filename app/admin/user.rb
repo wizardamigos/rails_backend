@@ -12,6 +12,7 @@ permit_params :email, :github_id, :city, :first_name, :last_name, :last_lesson
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+
   index do
     selectable_column
     id_column
@@ -22,7 +23,6 @@ permit_params :email, :github_id, :city, :first_name, :last_name, :last_lesson
     column :last_name
     column :created_at
     column :updated_at
-    column :sign_in_count
     column :last_lesson
     actions
   end
@@ -34,7 +34,6 @@ permit_params :email, :github_id, :city, :first_name, :last_name, :last_lesson
   filter :last_name
   filter :created_at
   filter :updated_at
-  filter :sign_in_count
   filter :last_lesson
 
   form do |f|
